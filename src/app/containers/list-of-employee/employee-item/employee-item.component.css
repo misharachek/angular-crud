@@ -1,0 +1,36 @@
+.employee-card {
+    width: 95%;
+}
+
+.card-subtitle {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+
+.card-information {
+    display: flex;
+    width: 300px;
+}
+
+.information {
+    flex: 1;
+}
+
+.employee-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.employee-photo-wrapper {
+    width: 30%;
+}
+
+.employee-information-wrapper {
+    width: 60%;
+}
+
+.employee-photo {
+    width: 100%;
+    margin-top: 0;
+}
