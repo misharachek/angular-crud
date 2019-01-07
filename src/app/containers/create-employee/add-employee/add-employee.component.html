@@ -1,0 +1,30 @@
+<div class="add-card-wrapper">
+  <mat-card class="add-card">
+    <mat-card-header>
+      <mat-card-title class="title">{{locale.addCardTitle | uppercase}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <form #employeeForm="ngForm"
+              class="form-wrapper" (ngSubmit)="saveEmployee(employeeForm)">
+
+            <mat-form-field class="form-feild">
+              <input matInput  name="fullName" [(ngModel)]="fullName" placeholder = {{locale.nameInputPlaceholder}}>
+            </mat-form-field>
+          
+            <mat-form-field class="form-feild">
+                <input matInput name="email" [(ngModel)]="email" placeholder = {{locale.emailPlaceholder}}>
+            </mat-form-field>
+          </form>
+    </mat-card-content>
+
+    <mat-card-actions class="button-wrapper">
+        <button mat-raised-button 
+                color="primary"
+                (click)="saveEmployee(employeeForm)">
+                {{locale.addButtonTitle}}
+        </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+{{employeeForm.value | json}} 

@@ -1,0 +1,28 @@
+.add-card-wrapper {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.add-card {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-wrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.form-feild {
+    width: 100%;
+}
+
+.button-wrapper {
+    padding-left: 20px;
+}
