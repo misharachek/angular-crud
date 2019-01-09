@@ -1,6 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ListOfEmployeeComponent } from './list-of-employee.component';
+import {ListOfEmployeeComponent} from './list-of-employee.component';
+import {EmployeeItemComponent} from '../employee-item';
+import {MatCardModule} from '@angular/material';
 
 describe('ListOfEmployeeComponent', () => {
   let component: ListOfEmployeeComponent;
@@ -8,9 +10,13 @@ describe('ListOfEmployeeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListOfEmployeeComponent ]
+      declarations: [
+        ListOfEmployeeComponent,
+        EmployeeItemComponent
+      ],
+      imports: [MatCardModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

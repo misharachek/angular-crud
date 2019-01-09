@@ -18,4 +18,5 @@ import {ListOfEmployeeComponent} from './root';
   ],
   exports: [ListOfEmployeeComponent]
 })
-export class ListOfEmployeeModule { }
+export class ListOfEmployeeModule {
+}

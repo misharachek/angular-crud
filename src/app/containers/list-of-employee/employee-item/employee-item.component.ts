@@ -12,7 +12,8 @@ export class EmployeeItemComponent implements OnInit {
   @Input() employee: any;
   locale = locales;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

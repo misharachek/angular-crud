@@ -1,6 +1,14 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CreateEmployeeComponent } from './create-employee.component';
+import {CreateEmployeeComponent} from './create-employee.component';
+import {AddEmployeeComponent} from '../add-employee';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatInputModule
+} from '@angular/material';
+import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('CreateEmployeeComponent', () => {
   let component: CreateEmployeeComponent;
@@ -8,9 +16,19 @@ describe('CreateEmployeeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateEmployeeComponent ]
+      declarations: [
+        CreateEmployeeComponent,
+        AddEmployeeComponent
+      ],
+      imports: [
+        MatCardModule,
+        MatInputModule,
+        MatButtonModule,
+        FormsModule,
+        BrowserAnimationsModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

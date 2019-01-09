@@ -4,7 +4,6 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AddEmployeeComponent} from './add-employee';
 
-
 // @angular material
 import {
   MatCardModule,
@@ -12,7 +11,7 @@ import {
   MatButtonModule
 } from '@angular/material';
 
-// roort
+// root
 import {CreateEmployeeComponent} from './root';
 
 @NgModule({
@@ -30,4 +29,5 @@ import {CreateEmployeeComponent} from './root';
   ],
   exports: [CreateEmployeeComponent]
 })
-export class CreateEmployeeModule { }
+export class CreateEmployeeModule {
+}

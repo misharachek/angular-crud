@@ -1,6 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { EmployeeItemComponent } from './employee-item.component';
+import {EmployeeItemComponent} from './employee-item.component';
+import {MatCardModule} from '@angular/material';
 
 describe('EmployeeItemComponent', () => {
   let component: EmployeeItemComponent;
@@ -8,15 +9,17 @@ describe('EmployeeItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EmployeeItemComponent ]
+      declarations: [EmployeeItemComponent],
+      imports: [
+        MatCardModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(EmployeeItemComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

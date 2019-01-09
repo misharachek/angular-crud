@@ -1,55 +1,55 @@
 <mat-card class="employee-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{employee.name}}</mat-card-title>
-          <mat-card-subtitle class="card-subtitle">
-              <div>{{locale.departmentTitle}}</div>
-              <div>{{employee.department}}</div>
-            </mat-card-subtitle>
-        </mat-card-header>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{employee.name}}</mat-card-title>
+    <mat-card-subtitle class="card-subtitle">
+      <div>{{locale.departmentTitle}}</div>
+      <div>{{employee.department}}</div>
+    </mat-card-subtitle>
+  </mat-card-header>
 
-    
-        <mat-card-content class="employee-card-wrapper">
-            <div class="employee-photo-wrapper">
-                <img class="employee-photo" 
-                    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                    alt="Photo of a Shiba Inu">
-            </div>
 
-            <div class="employee-information-wrapper">
-            <div class="card-information">
-                <div class="information">{{locale.genderTitle}}</div>
-                <div class="information">{{employee.gender}}</div>
-            </div>
+  <mat-card-content class="employee-card-wrapper">
+    <div class="employee-photo-wrapper">
+      <img class="employee-photo"
+           src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+           alt="Photo of a Shiba Inu">
+    </div>
 
-            <div class="card-information">
-                <div class="information">{{locale.dateOfBirdhTitle}}</div>
-                <div class="information">{{employee.dateOfBirth | date}}</div>
-            </div>
+    <div class="employee-information-wrapper">
+      <div class="card-information">
+        <div class="information">{{locale.genderTitle}}</div>
+        <div class="information">{{employee.gender}}</div>
+      </div>
 
-            <div  class="card-information">
-                <div class="information">{{locale.contactPreferenceTitle}}</div>
-                <div class="information">{{employee.contactPreference}}</div>
-            </div>
+      <div class="card-information">
+        <div class="information">{{locale.dateOfBirthTitle}}</div>
+        <div class="information">{{employee.dateOfBirth | date}}</div>
+      </div>
 
-            <div  class="card-information">
-                <div class="information">{{locale.phoneNumberTitle}}</div>
-                <div class="information">{{employee.phoneNumber}}</div>
-            </div>
+      <div class="card-information">
+        <div class="information">{{locale.contactPreferenceTitle}}</div>
+        <div class="information">{{employee.contactPreference}}</div>
+      </div>
 
-            <div  class="card-information">
-                <div class="information">{{locale.emailTatle}}</div>
-                <div class="information">{{employee.email}}</div>
-            </div>
+      <div class="card-information">
+        <div class="information">{{locale.phoneNumberTitle}}</div>
+        <div class="information">{{employee.phoneNumber}}</div>
+      </div>
 
-            <div  class="card-information">
-                <div class="information">{{locale.isActiveTitle}}</div>
-                <div class="information">{{employee.isActive}}</div>
-            </div>
-            </div>
-        </mat-card-content>
-        <mat-card-actions>
-          <!-- <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button> -->
-        </mat-card-actions>
-      </mat-card>
+      <div class="card-information">
+        <div class="information">{{locale.emailTitle}}</div>
+        <div class="information">{{employee.email}}</div>
+      </div>
+
+      <div class="card-information">
+        <div class="information">{{locale.isActiveTitle}}</div>
+        <div class="information">{{employee.isActive}}</div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <!-- <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button> -->
+  </mat-card-actions>
+</mat-card>
