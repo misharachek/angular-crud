@@ -1,7 +1,7 @@
-export const locales = {
+export const employeeListLocales = {
   'departmentTitle': 'DEPARTMENT:',
   'genderTitle': 'Gender:',
-  'dateOfBirthTitle': 'Date of Birdth:',
+  'dateOfBirthTitle': 'Date of Birth:',
   'contactPreferenceTitle': 'Contact Preference:',
   'phoneNumberTitle': 'Phone:',
   'emailTitle': 'Email:',

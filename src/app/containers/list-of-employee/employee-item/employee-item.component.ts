@@ -1,18 +1,20 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit} from '@angular/core';
 
 // locales
-import {locales} from './locale';
+import {employeeListLocales} from './locale';
 
 @Component({
   selector: 'app-employee-item',
   templateUrl: './employee-item.component.html',
-  styleUrls: ['./employee-item.component.css']
+  styleUrls: ['./employee-item.component.css'],
+  providers: [
+    {provide: employeeListLocales, useValue: employeeListLocales}
+  ]
 })
 export class EmployeeItemComponent implements OnInit {
   @Input() employee: any;
-  locale = locales;
 
-  constructor() {
+  constructor(@Inject(employeeListLocales) public locales) {
   }
 
   ngOnInit() {

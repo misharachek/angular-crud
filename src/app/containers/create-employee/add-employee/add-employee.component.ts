@@ -10,13 +10,23 @@ import {addEmployeeLocales} from './locales';
   ]
 })
 export class AddEmployeeComponent implements OnInit {
-  // locale = locales;
+  public previewPhoto = false;
 
   constructor(@Inject(addEmployeeLocales) public locales) {
   }
 
-  saveEmployee(employeeForm: any): void {
+  public departments = [
+    {value: 'department-1', viewValue: 'DEPARTMENT-1'},
+    {value: 'department-2', viewValue: 'DEPARTMENT-2'},
+    {value: 'department-3', viewValue: 'DEPARTMENT-3'}
+  ];
+
+  public saveEmployee(employeeForm: any): void {
     console.log(employeeForm.value);
+  }
+
+  public previewPhotoToggle() {
+    this.previewPhoto = !this.previewPhoto;
   }
 
   ngOnInit() {

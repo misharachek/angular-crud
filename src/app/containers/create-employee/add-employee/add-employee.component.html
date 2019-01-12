@@ -11,17 +11,91 @@
             class="form-wrapper"
             (ngSubmit)="saveEmployee(employeeForm)">
 
-        <mat-form-field class="form-feild">
+        <!--FULL NAME-->
+        <mat-form-field class="form-fields">
           <input matInput name="fullName"
                  [(ngModel)]="fullName"
                  placeholder={{locales.nameInputPlaceholder}}>
         </mat-form-field>
 
-        <mat-form-field class="form-feild">
+        <!--BIRTH-->
+        <mat-form-field class="form-fields">
+          <input matInput [matDatepicker]="picker"
+                 placeholder={{locales.birthPlaceholder}}
+                 name="dateOfBirth"
+                 [(ngModel)]="dateOfBirth">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker startView="year"></mat-datepicker>
+        </mat-form-field>
+
+        <!--GENDER-->
+        <mat-form-field class="form-fields">
+          <mat-select placeholder={{locales.genderPlaceholder}}
+                      [(ngModel)]="gender"
+                      name="gender">
+            <mat-option>{{locales.genderMaleValue}}</mat-option>
+            <mat-option>{{locales.genderFemaleValue}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--EMAIL-->
+        <mat-form-field class="form-fields">
           <input matInput name="email"
                  [(ngModel)]="email"
                  placeholder={{locales.emailPlaceholder}}>
         </mat-form-field>
+
+        <!--PHONE NUMBER-->
+        <mat-form-field class="form-fields">
+          <input matInput name="phoneNumber"
+                 [(ngModel)]="phoneNumber"
+                 placeholder="{{locales.phoneNumberPlaceholder}}">
+        </mat-form-field>
+
+        <!--CONTACT PREFERENCE-->
+        <mat-form-field class="form-fields">
+          <mat-select placeholder={{locales.contactPreferencePleceholder}}
+                      [(ngModel)]="contactPreference"
+                      name="contactPreference">
+            <mat-option>{{locales.phoneNumberPlaceholder}}</mat-option>
+            <mat-option>{{locales.emailPlaceholder}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--DEPARTMENT-->
+        <mat-form-field class="form-fields">
+          <mat-select placeholder={{locales.departmentPlaceholder}}
+                      [(ngModel)]="department"
+                      name="department">
+            <mat-option *ngFor="let item of departments" [value]="item.value">
+              {{item.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--PHOTO PATH-->
+        <mat-form-field class="photo-field">
+          <input matInput name="photoPath"
+                 [(ngModel)]="photoPath"
+                 placeholder={{locales.photoPathPlaceholder}}>
+        </mat-form-field>
+
+        <button class="photo-button"
+                type="button"
+                mat-raised-button
+                color="primary"
+                (click)="previewPhotoToggle()">
+          {{previewPhoto? "Hide " : "Show "}}{{locales.previewPhotoButton}}
+        </button>
+
+        <div *ngIf="this.previewPhoto" class="form-fields">
+          <img src={{photoPath}} class="photo">
+        </div>
+
+        <!--IS ACTIVE-->
+        <h3>
+          <mat-checkbox name="isActive" [(ngModel)]="isActive">{{locales.stateTitle}}</mat-checkbox>
+        </h3>
       </form>
     </mat-card-content>
 

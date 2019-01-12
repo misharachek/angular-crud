@@ -3,7 +3,7 @@
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{employee.name}}</mat-card-title>
     <mat-card-subtitle class="card-subtitle">
-      <div>{{locale.departmentTitle}}</div>
+      <div>{{locales.departmentTitle}}</div>
       <div>{{employee.department}}</div>
     </mat-card-subtitle>
   </mat-card-header>
@@ -18,32 +18,32 @@
 
     <div class="employee-information-wrapper">
       <div class="card-information">
-        <div class="information">{{locale.genderTitle}}</div>
+        <div class="information">{{locales.genderTitle}}</div>
         <div class="information">{{employee.gender}}</div>
       </div>
 
       <div class="card-information">
-        <div class="information">{{locale.dateOfBirthTitle}}</div>
+        <div class="information">{{locales.dateOfBirthTitle}}</div>
         <div class="information">{{employee.dateOfBirth | date}}</div>
       </div>
 
       <div class="card-information">
-        <div class="information">{{locale.contactPreferenceTitle}}</div>
+        <div class="information">{{locales.contactPreferenceTitle}}</div>
         <div class="information">{{employee.contactPreference}}</div>
       </div>
 
       <div class="card-information">
-        <div class="information">{{locale.phoneNumberTitle}}</div>
+        <div class="information">{{locales.phoneNumberTitle}}</div>
         <div class="information">{{employee.phoneNumber}}</div>
       </div>
 
       <div class="card-information">
-        <div class="information">{{locale.emailTitle}}</div>
+        <div class="information">{{locales.emailTitle}}</div>
         <div class="information">{{employee.email}}</div>
       </div>
 
       <div class="card-information">
-        <div class="information">{{locale.isActiveTitle}}</div>
+        <div class="information">{{locales.isActiveTitle}}</div>
         <div class="information">{{employee.isActive}}</div>
       </div>
     </div>

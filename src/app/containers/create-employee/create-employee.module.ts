@@ -8,7 +8,10 @@ import {AddEmployeeComponent} from './add-employee';
 import {
   MatCardModule,
   MatInputModule,
-  MatButtonModule
+  MatButtonModule,
+  MatSelectModule,
+  MatCheckboxModule,
+  MatDatepickerModule, MatNativeDateModule,
 } from '@angular/material';
 
 // root
@@ -21,7 +24,11 @@ import {CreateEmployeeComponent} from './root';
     BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   declarations: [
     CreateEmployeeComponent,

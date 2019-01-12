@@ -1,6 +1,16 @@
 export const addEmployeeLocales = {
   'addCardTitle': 'create employee',
   'nameInputPlaceholder': 'Full Name',
+  'birthPlaceholder': 'Date of Birth',
   'emailPlaceholder': 'Email',
-  'addButtonTitle': 'Save'
+  'phoneNumberPlaceholder': 'Phone Number',
+  'contactPreferencePleceholder': 'Contact Preference',
+  'genderPlaceholder': 'Gender',
+  'genderMaleValue': 'Male',
+  'genderFemaleValue': 'Female',
+  'departmentPlaceholder': 'Department',
+  'photoPathPlaceholder': 'Photo Path',
+  'stateTitle': 'Is Active',
+  'previewPhotoButton': 'Preview',
+  'addButtonTitle': 'Save',
 };
