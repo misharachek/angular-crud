@@ -9,21 +9,27 @@
     <mat-card-content>
       <form #employeeForm="ngForm"
             class="form-wrapper"
-            (ngSubmit)="saveEmployee(employeeForm)">
+            (ngSubmit)="saveEmployee(model)">
 
         <!--FULL NAME-->
         <mat-form-field class="form-fields">
-          <input matInput name="fullName"
-                 [(ngModel)]="fullName"
+          <input matInput
+                 name="name"
+                 required
+                 [(ngModel)]="model.name"
+                 #name="ngModel"
                  placeholder={{locales.nameInputPlaceholder}}>
+          <mat-error *ngIf="name.invalid">Name is required</mat-error>
         </mat-form-field>
 
         <!--BIRTH-->
         <mat-form-field class="form-fields">
-          <input matInput [matDatepicker]="picker"
+          <input matInput
+                 readonly
+                 [matDatepicker]="picker"
                  placeholder={{locales.birthPlaceholder}}
                  name="dateOfBirth"
-                 [(ngModel)]="dateOfBirth">
+                 [(ngModel)]="model.dateOfBirth">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker startView="year"></mat-datepicker>
         </mat-form-field>
@@ -40,7 +46,8 @@
 
         <!--EMAIL-->
         <mat-form-field class="form-fields">
-          <input matInput name="email"
+          <input matInput
+                 name="email"
                  [(ngModel)]="email"
                  placeholder={{locales.emailPlaceholder}}>
         </mat-form-field>
@@ -75,9 +82,13 @@
 
         <!--PHOTO PATH-->
         <mat-form-field class="photo-field">
-          <input matInput name="photoPath"
-                 [(ngModel)]="photoPath"
+          <input matInput
+                 name="photoPath"
+                 required
+                 [(ngModel)]="model.photoPath"
+                 #photoPath="ngModel"
                  placeholder={{locales.photoPathPlaceholder}}>
+          <mat-error *ngIf="photoPath.invalid">hgmbvn5</mat-error>
         </mat-form-field>
 
         <button class="photo-button"
@@ -102,10 +113,14 @@
     <mat-card-actions class="button-wrapper">
       <button mat-raised-button
               color="primary"
+              [disabled]="employeeForm.invalid"
               (click)="saveEmployee(employeeForm)">
         {{locales.addButtonTitle}}
       </button>
     </mat-card-actions>
   </mat-card>
 </div>
-{{employeeForm.value | json}}
+
+
+Form: {{model.value | json}}
+<!--model: {{model.value | json}}-->

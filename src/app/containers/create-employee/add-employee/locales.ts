@@ -1,6 +1,6 @@
 export const addEmployeeLocales = {
   'addCardTitle': 'create employee',
-  'nameInputPlaceholder': 'Full Name',
+  'nameInputPlaceholder': 'Name',
   'birthPlaceholder': 'Date of Birth',
   'emailPlaceholder': 'Email',
   'phoneNumberPlaceholder': 'Phone Number',

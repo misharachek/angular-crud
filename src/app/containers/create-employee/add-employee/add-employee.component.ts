@@ -1,4 +1,5 @@
 import {Component, OnInit, Inject} from '@angular/core';
+import {Employee} from 'app/models';
 import {addEmployeeLocales} from './locales';
 
 @Component({
@@ -11,6 +12,7 @@ import {addEmployeeLocales} from './locales';
 })
 export class AddEmployeeComponent implements OnInit {
   public previewPhoto = false;
+  public model = new Employee();
 
   constructor(@Inject(addEmployeeLocales) public locales) {
   }
@@ -21,8 +23,8 @@ export class AddEmployeeComponent implements OnInit {
     {value: 'department-3', viewValue: 'DEPARTMENT-3'}
   ];
 
-  public saveEmployee(employeeForm: any): void {
-    console.log(employeeForm.value);
+  public saveEmployee(model: any): void {
+    console.log(model);
   }
 
   public previewPhotoToggle() {
